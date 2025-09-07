@@ -77,7 +77,7 @@ public class AccountController(SignInManager<User> signInManager) : BaseApiContr
         return Ok(user.Address);
     } 
     
-     [Authorize]
+    [Authorize]
     [HttpGet("address")]
     public async Task<ActionResult<Address>> GetSavedAddress()
     {
